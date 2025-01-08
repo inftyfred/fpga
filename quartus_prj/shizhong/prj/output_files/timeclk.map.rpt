@@ -1,0 +1,670 @@
+Analysis & Synthesis report for timeclk
+Sun Oct 15 16:32:00 2023
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[0].fliter1
+ 13. Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[1].fliter1
+ 14. Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[2].fliter1
+ 15. Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[3].fliter1
+ 16. Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[4].fliter1
+ 17. Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[5].fliter1
+ 18. Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[6].fliter1
+ 19. Parameter Settings for User Entity Instance: time_counter:time1|clk_div:clk_div_1s
+ 20. Parameter Settings for User Entity Instance: stop_watch:stop|clk_div:clk_div_10ms
+ 21. Parameter Settings for User Entity Instance: led_seg7_display:len_seg7|clk_div:clk_div_1ms
+ 22. Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[6].fliter1"
+ 23. Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[5].fliter1"
+ 24. Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[4].fliter1"
+ 25. Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[3].fliter1"
+ 26. Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[2].fliter1"
+ 27. Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[1].fliter1"
+ 28. Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[0].fliter1"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+ 32. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Oct 15 16:32:00 2023       ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
+; Revision Name                      ; timeclk                                     ;
+; Top-level Entity Name              ; digital_clock_top                           ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,249                                       ;
+;     Total combinational functions  ; 1,238                                       ;
+;     Dedicated logic registers      ; 612                                         ;
+; Total registers                    ; 612                                         ;
+; Total pins                         ; 21                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE40F23C8       ;                    ;
+; Top-level entity name                                                      ; digital_clock_top  ; timeclk            ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ; < 0.1%      ;
+;     Processors 9-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; ../src/time_counter.v            ; yes             ; User Verilog HDL File  ; D:/my_file/project_fpga/shizhong/src/time_counter.v      ;         ;
+; ../src/stop_watch.v              ; yes             ; User Verilog HDL File  ; D:/my_file/project_fpga/shizhong/src/stop_watch.v        ;         ;
+; ../src/model_change.v            ; yes             ; User Verilog HDL File  ; D:/my_file/project_fpga/shizhong/src/model_change.v      ;         ;
+; ../src/led_seg7_display.v        ; yes             ; User Verilog HDL File  ; D:/my_file/project_fpga/shizhong/src/led_seg7_display.v  ;         ;
+; ../src/key_module.v              ; yes             ; User Verilog HDL File  ; D:/my_file/project_fpga/shizhong/src/key_module.v        ;         ;
+; ../src/key_filter.v              ; yes             ; User Verilog HDL File  ; D:/my_file/project_fpga/shizhong/src/key_filter.v        ;         ;
+; ../src/digital_clock_top.v       ; yes             ; User Verilog HDL File  ; D:/my_file/project_fpga/shizhong/src/digital_clock_top.v ;         ;
+; ../src/clk_div.v                 ; yes             ; User Verilog HDL File  ; D:/my_file/project_fpga/shizhong/src/clk_div.v           ;         ;
+; ../src/alarm_music.v             ; yes             ; User Verilog HDL File  ; D:/my_file/project_fpga/shizhong/src/alarm_music.v       ;         ;
+; ../src/adjust_module.v           ; yes             ; User Verilog HDL File  ; D:/my_file/project_fpga/shizhong/src/adjust_module.v     ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 1,249       ;
+;                                             ;             ;
+; Total combinational functions               ; 1238        ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 573         ;
+;     -- 3 input functions                    ; 176         ;
+;     -- <=2 input functions                  ; 489         ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 804         ;
+;     -- arithmetic mode                      ; 434         ;
+;                                             ;             ;
+; Total registers                             ; 612         ;
+;     -- Dedicated logic registers            ; 612         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 21          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; rst_n~input ;
+; Maximum fan-out                             ; 612         ;
+; Total fan-out                               ; 6159        ;
+; Average fan-out                             ; 3.26        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                        ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                         ; Library Name ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------+
+; |digital_clock_top                                ; 1238 (1)          ; 612 (0)      ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |digital_clock_top                                                          ; work         ;
+;    |adjust_module:adjust|                         ; 234 (234)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|adjust_module:adjust                                     ; work         ;
+;    |alarm_music:alarm|                            ; 167 (167)         ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|alarm_music:alarm                                        ; work         ;
+;    |key_module:key|                               ; 390 (7)           ; 307 (4)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|key_module:key                                           ; work         ;
+;       |key_filter:specify7_key_filter[0].fliter1| ; 54 (54)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|key_module:key|key_filter:specify7_key_filter[0].fliter1 ; work         ;
+;       |key_filter:specify7_key_filter[1].fliter1| ; 54 (54)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|key_module:key|key_filter:specify7_key_filter[1].fliter1 ; work         ;
+;       |key_filter:specify7_key_filter[2].fliter1| ; 54 (54)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|key_module:key|key_filter:specify7_key_filter[2].fliter1 ; work         ;
+;       |key_filter:specify7_key_filter[3].fliter1| ; 55 (55)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|key_module:key|key_filter:specify7_key_filter[3].fliter1 ; work         ;
+;       |key_filter:specify7_key_filter[4].fliter1| ; 55 (55)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|key_module:key|key_filter:specify7_key_filter[4].fliter1 ; work         ;
+;       |key_filter:specify7_key_filter[5].fliter1| ; 54 (54)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|key_module:key|key_filter:specify7_key_filter[5].fliter1 ; work         ;
+;       |key_filter:specify7_key_filter[6].fliter1| ; 55 (55)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|key_module:key|key_filter:specify7_key_filter[6].fliter1 ; work         ;
+;       |model_change:model1|                       ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|key_module:key|model_change:model1                       ; work         ;
+;    |led_seg7_display:len_seg7|                    ; 142 (103)         ; 56 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|led_seg7_display:len_seg7                                ; work         ;
+;       |clk_div:clk_div_1ms|                       ; 39 (39)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|led_seg7_display:len_seg7|clk_div:clk_div_1ms            ; work         ;
+;    |stop_watch:stop|                              ; 87 (48)           ; 54 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|stop_watch:stop                                          ; work         ;
+;       |clk_div:clk_div_10ms|                      ; 39 (39)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|stop_watch:stop|clk_div:clk_div_10ms                     ; work         ;
+;    |time_counter:time1|                           ; 217 (177)         ; 80 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|time_counter:time1                                       ; work         ;
+;       |clk_div:clk_div_1s|                        ; 40 (40)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_clock_top|time_counter:time1|clk_div:clk_div_1s                    ; work         ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                     ;
++---------------------------------------------+----------------------------------------------------------+
+; Register name                               ; Reason for Removal                                       ;
++---------------------------------------------+----------------------------------------------------------+
+; led_seg7_display:len_seg7|show_num[24..31]  ; Stuck at GND due to stuck port data_in                   ;
+; stop_watch:stop|clk_div:clk_div_10ms|cnt[0] ; Merged with time_counter:time1|clk_div:clk_div_1s|cnt[0] ;
+; Total Number of Removed Registers = 9       ;                                                          ;
++---------------------------------------------+----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 612   ;
+; Number of registers using Synchronous Clear  ; 329   ;
+; Number of registers using Synchronous Load   ; 36    ;
+; Number of registers using Asynchronous Clear ; 612   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 123   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                 ;
++--------------------------------------------------------------------+---------+
+; Inverted Register                                                  ; Fan out ;
++--------------------------------------------------------------------+---------+
+; alarm_music:alarm|beep_r                                           ; 2       ;
+; adjust_module:adjust|adj_sec0[0]                                   ; 6       ;
+; time_counter:time1|sec0[0]                                         ; 8       ;
+; time_counter:time1|min1[0]                                         ; 9       ;
+; time_counter:time1|month1[0]                                       ; 21      ;
+; adjust_module:adjust|adj_min1[0]                                   ; 5       ;
+; time_counter:time1|hour0[0]                                        ; 10      ;
+; adjust_module:adjust|adj_hour0[0]                                  ; 7       ;
+; time_counter:time1|month0[1]                                       ; 21      ;
+; adjust_module:adjust|adj_min0[1]                                   ; 5       ;
+; adjust_module:adjust|adj_month0[1]                                 ; 6       ;
+; time_counter:time1|day1[1]                                         ; 9       ;
+; time_counter:time1|hour1[1]                                        ; 7       ;
+; time_counter:time1|year1[1]                                        ; 5       ;
+; adjust_module:adjust|adj_hour1[1]                                  ; 9       ;
+; adjust_module:adjust|adj_year1[1]                                  ; 9       ;
+; time_counter:time1|hour0[1]                                        ; 9       ;
+; adjust_module:adjust|adj_hour0[1]                                  ; 6       ;
+; adjust_module:adjust|adj_sec1[2]                                   ; 6       ;
+; time_counter:time1|sec1[2]                                         ; 6       ;
+; adjust_module:adjust|adj_min0[2]                                   ; 5       ;
+; adjust_module:adjust|adj_month0[2]                                 ; 6       ;
+; time_counter:time1|min1[2]                                         ; 7       ;
+; adjust_module:adjust|adj_min1[2]                                   ; 4       ;
+; time_counter:time1|min0[3]                                         ; 10      ;
+; adjust_module:adjust|adj_sec0[3]                                   ; 5       ;
+; time_counter:time1|day0[3]                                         ; 6       ;
+; adjust_module:adjust|adj_day0[3]                                   ; 7       ;
+; time_counter:time1|sec0[3]                                         ; 5       ;
+; key_module:key|key_filter:specify7_key_filter[0].fliter1|key_state ; 2       ;
+; key_module:key|key_filter:specify7_key_filter[6].fliter1|key_state ; 2       ;
+; key_module:key|key_filter:specify7_key_filter[1].fliter1|key_state ; 2       ;
+; key_module:key|key_filter:specify7_key_filter[3].fliter1|key_state ; 2       ;
+; key_module:key|key_filter:specify7_key_filter[4].fliter1|key_state ; 2       ;
+; key_module:key|key_filter:specify7_key_filter[5].fliter1|key_state ; 2       ;
+; key_module:key|key_filter:specify7_key_filter[2].fliter1|key_state ; 2       ;
+; Total number of inverted registers = 36                            ;         ;
++--------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |digital_clock_top|alarm_music:alarm|count[8]             ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |digital_clock_top|alarm_music:alarm|count1[19]           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |digital_clock_top|time_counter:time1|sec0[2]             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |digital_clock_top|alarm_music:alarm|state[1]             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |digital_clock_top|key_module:key|adjust_shif[0]          ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |digital_clock_top|time_counter:time1|sec1[0]             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|clock_min1[2]     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|clock_min0[1]     ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |digital_clock_top|led_seg7_display:len_seg7|show_num[2]  ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |digital_clock_top|led_seg7_display:len_seg7|show_num[15] ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |digital_clock_top|time_counter:time1|year1[3]            ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |digital_clock_top|time_counter:time1|year0[1]            ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |digital_clock_top|time_counter:time1|min0[0]             ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |digital_clock_top|stop_watch:stop|cnt_ms0[1]             ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |digital_clock_top|time_counter:time1|min1[3]             ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|clock_hour1[1]    ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|clock_hour0[3]    ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |digital_clock_top|stop_watch:stop|cnt_ms1[0]             ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_year0[0]      ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |digital_clock_top|stop_watch:stop|cnt_s0[0]              ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |digital_clock_top|time_counter:time1|hour1[3]            ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |digital_clock_top|time_counter:time1|hour0[3]            ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |digital_clock_top|stop_watch:stop|cnt_s1[0]              ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_year1[2]      ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_min0[3]       ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_month0[3]     ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_month1[0]     ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |digital_clock_top|stop_watch:stop|cnt_m1[1]              ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |digital_clock_top|stop_watch:stop|cnt_m0[2]              ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_sec0[2]       ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_day0[1]       ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_day1[2]       ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_hour0[3]      ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_hour1[0]      ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_min1[3]       ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 6 LEs                ; 15 LEs                 ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_sec1[1]       ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 3 LEs                ; 27 LEs                 ; Yes        ; |digital_clock_top|time_counter:time1|month1[2]           ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |digital_clock_top|time_counter:time1|day1[2]             ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |digital_clock_top|time_counter:time1|day0[2]             ;
+; 12:1               ; 3 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |digital_clock_top|time_counter:time1|month0[3]           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |digital_clock_top|time_counter:time1|sec0[0]             ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |digital_clock_top|time_counter:time1|min1[2]             ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |digital_clock_top|time_counter:time1|hour0[1]            ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_min0[1]       ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_month0[1]     ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_sec0[0]       ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_hour0[0]      ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |digital_clock_top|adjust_module:adjust|adj_min1[0]       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |digital_clock_top|led_seg7_display:len_seg7|Mux0         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[0].fliter1 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; CNT_MAX        ; 1     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[1].fliter1 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; CNT_MAX        ; 1     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[2].fliter1 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; CNT_MAX        ; 1     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[3].fliter1 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; CNT_MAX        ; 1     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[4].fliter1 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; CNT_MAX        ; 1     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[5].fliter1 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; CNT_MAX        ; 1     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_module:key|key_filter:specify7_key_filter[6].fliter1 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; CNT_MAX        ; 1     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: time_counter:time1|clk_div:clk_div_1s ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; CNT_MAX        ; 10    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: stop_watch:stop|clk_div:clk_div_10ms ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; CNT_MAX        ; 20    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_seg7_display:len_seg7|clk_div:clk_div_1ms ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; CNT_MAX        ; 1     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[6].fliter1" ;
++-----------+--------+----------+------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                              ;
++-----------+--------+----------+------------------------------------------------------+
+; key_state ; Output ; Info     ; Explicitly unconnected                               ;
++-----------+--------+----------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[5].fliter1" ;
++-----------+--------+----------+------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                              ;
++-----------+--------+----------+------------------------------------------------------+
+; key_state ; Output ; Info     ; Explicitly unconnected                               ;
++-----------+--------+----------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[4].fliter1" ;
++-----------+--------+----------+------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                              ;
++-----------+--------+----------+------------------------------------------------------+
+; key_state ; Output ; Info     ; Explicitly unconnected                               ;
++-----------+--------+----------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[3].fliter1" ;
++-----------+--------+----------+------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                              ;
++-----------+--------+----------+------------------------------------------------------+
+; key_state ; Output ; Info     ; Explicitly unconnected                               ;
++-----------+--------+----------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[2].fliter1" ;
++-----------+--------+----------+------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                              ;
++-----------+--------+----------+------------------------------------------------------+
+; key_state ; Output ; Info     ; Explicitly unconnected                               ;
++-----------+--------+----------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[1].fliter1" ;
++-----------+--------+----------+------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                              ;
++-----------+--------+----------+------------------------------------------------------+
+; key_state ; Output ; Info     ; Explicitly unconnected                               ;
++-----------+--------+----------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_module:key|key_filter:specify7_key_filter[0].fliter1" ;
++-----------+--------+----------+------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                              ;
++-----------+--------+----------+------------------------------------------------------+
+; key_state ; Output ; Info     ; Explicitly unconnected                               ;
++-----------+--------+----------+------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 21                          ;
+; cycloneiii_ff         ; 612                         ;
+;     CLR               ; 149                         ;
+;     CLR SCLR          ; 321                         ;
+;     CLR SLD           ; 19                          ;
+;     ENA CLR           ; 98                          ;
+;     ENA CLR SCLR      ; 8                           ;
+;     ENA CLR SLD       ; 17                          ;
+; cycloneiii_lcell_comb ; 1240                        ;
+;     arith             ; 434                         ;
+;         2 data inputs ; 405                         ;
+;         3 data inputs ; 29                          ;
+;     normal            ; 806                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 32                          ;
+;         2 data inputs ; 53                          ;
+;         3 data inputs ; 147                         ;
+;         4 data inputs ; 573                         ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 3.24                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+    Info: Processing started: Sun Oct 15 16:31:50 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off timeclk -c timeclk
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /my_file/project_fpga/shizhong/src/time_counter.v
+    Info (12023): Found entity 1: time_counter
+Info (12021): Found 1 design units, including 1 entities, in source file /my_file/project_fpga/shizhong/src/stop_watch.v
+    Info (12023): Found entity 1: stop_watch
+Info (12021): Found 1 design units, including 1 entities, in source file /my_file/project_fpga/shizhong/src/model_change.v
+    Info (12023): Found entity 1: model_change
+Info (12021): Found 1 design units, including 1 entities, in source file /my_file/project_fpga/shizhong/src/led_seg7_display.v
+    Info (12023): Found entity 1: led_seg7_display
+Info (12021): Found 1 design units, including 1 entities, in source file /my_file/project_fpga/shizhong/src/key_module.v
+    Info (12023): Found entity 1: key_module
+Info (12021): Found 1 design units, including 1 entities, in source file /my_file/project_fpga/shizhong/src/key_filter.v
+    Info (12023): Found entity 1: key_filter
+Info (12021): Found 1 design units, including 1 entities, in source file /my_file/project_fpga/shizhong/src/digital_clock_top.v
+    Info (12023): Found entity 1: digital_clock_top
+Info (12021): Found 1 design units, including 1 entities, in source file /my_file/project_fpga/shizhong/src/clk_div.v
+    Info (12023): Found entity 1: clk_div
+Info (12021): Found 1 design units, including 1 entities, in source file /my_file/project_fpga/shizhong/src/alarm_music.v
+    Info (12023): Found entity 1: alarm_music
+Info (12021): Found 1 design units, including 1 entities, in source file /my_file/project_fpga/shizhong/src/adjust_module.v
+    Info (12023): Found entity 1: adjust_module
+Info (12127): Elaborating entity "digital_clock_top" for the top level hierarchy
+Info (12128): Elaborating entity "key_module" for hierarchy "key_module:key"
+Info (12128): Elaborating entity "key_filter" for hierarchy "key_module:key|key_filter:specify7_key_filter[0].fliter1"
+Warning (10230): Verilog HDL assignment warning at key_filter.v(19): truncated value with size 32 to match size of target (20)
+Warning (10230): Verilog HDL assignment warning at key_filter.v(31): truncated value with size 32 to match size of target (20)
+Info (12128): Elaborating entity "model_change" for hierarchy "key_module:key|model_change:model1"
+Info (12128): Elaborating entity "time_counter" for hierarchy "time_counter:time1"
+Warning (10230): Verilog HDL assignment warning at time_counter.v(131): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "clk_div" for hierarchy "time_counter:time1|clk_div:clk_div_1s"
+Info (12128): Elaborating entity "adjust_module" for hierarchy "adjust_module:adjust"
+Warning (10230): Verilog HDL assignment warning at adjust_module.v(181): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at adjust_module.v(206): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at adjust_module.v(217): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at adjust_module.v(230): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at adjust_module.v(241): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at adjust_module.v(254): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at adjust_module.v(265): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "stop_watch" for hierarchy "stop_watch:stop"
+Info (12128): Elaborating entity "clk_div" for hierarchy "stop_watch:stop|clk_div:clk_div_10ms"
+Info (12128): Elaborating entity "led_seg7_display" for hierarchy "led_seg7_display:len_seg7"
+Warning (10230): Verilog HDL assignment warning at led_seg7_display.v(57): truncated value with size 6 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at led_seg7_display.v(59): truncated value with size 6 to match size of target (3)
+Info (12128): Elaborating entity "clk_div" for hierarchy "led_seg7_display:len_seg7|clk_div:clk_div_1ms"
+Info (12128): Elaborating entity "alarm_music" for hierarchy "alarm_music:alarm"
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file D:/my_file/project_fpga/shizhong/prj/output_files/timeclk.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1270 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 1249 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4951 megabytes
+    Info: Processing ended: Sun Oct 15 16:32:00 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:08
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/my_file/project_fpga/shizhong/prj/output_files/timeclk.map.smsg.
+
+

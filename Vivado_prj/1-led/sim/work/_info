@@ -1,0 +1,145 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/my_app/modelsim_2020/win64
+T_opt
+!s110 1728739618
+VgSPGeV@fC?U5G:YaAn?5o3
+04 6 4 work tb_led fast 0
+=1-1c8341c4ff26-670a7921-26d-7ec
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1730708132
+Vj2Q]MZ1WzA:1:8ZQJ80:Q1
+04 11 4 work tb_led_flow fast 0
+=1-1c8341c4ff26-672882a4-fd-4d78
+R1
+R2
+n@_opt1
+R3
+vled
+Z4 !s110 1728739326
+!i10b 1
+!s100 cm6?m2>gnh=C9B9dEzOo42
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I[9W808zHiTgTfk::`0Y9b3
+Z6 dD:/my_file/my_project/fpga_prj/Vivado_prj/1-led/sim
+w1728736842
+8D:/my_file/my_project/fpga_prj/Vivado_prj/1-led/rtl/led.v
+FD:/my_file/my_project/fpga_prj/Vivado_prj/1-led/rtl/led.v
+!i122 1
+L0 1 9
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2020.4;71
+r1
+!s85 0
+31
+!s108 1728739326.000000
+!s107 D:/my_file/my_project/fpga_prj/Vivado_prj/1-led/rtl/led.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/my_file/my_project/fpga_prj/Vivado_prj/1-led/rtl/led.v|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vled_flow
+!s110 1730708103
+!i10b 1
+!s100 JiKA5^>CYb`zg4Ga3WJ[e0
+R5
+Ig[T86ECMnj@dKNR?Rk=I]1
+R6
+w1730707133
+8D:/my_file/my_project/fpga_prj/Vivado_prj/2-led_flow/rtl/led_flow.v
+FD:/my_file/my_project/fpga_prj/Vivado_prj/2-led_flow/rtl/led_flow.v
+!i122 5
+L0 1 29
+R7
+R8
+r1
+!s85 0
+31
+Z10 !s108 1730708102.000000
+!s107 D:/my_file/my_project/fpga_prj/Vivado_prj/2-led_flow/rtl/led_flow.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/my_file/my_project/fpga_prj/Vivado_prj/2-led_flow/rtl/led_flow.v|
+!i113 0
+R9
+R2
+vtb_flow_led
+!s110 1730707964
+!i10b 1
+!s100 E=RT60kHI60?CzaXimU_72
+R5
+I8<WK?=hkYJVWmNYSk@P`M0
+R6
+w1730707838
+Z11 8D:/my_file/my_project/fpga_prj/Vivado_prj/2-led_flow/sim/tb_led_flow.v
+Z12 FD:/my_file/my_project/fpga_prj/Vivado_prj/2-led_flow/sim/tb_led_flow.v
+!i122 2
+Z13 L0 3 26
+R7
+R8
+r1
+!s85 0
+31
+!s108 1730707964.000000
+Z14 !s107 D:/my_file/my_project/fpga_prj/Vivado_prj/2-led_flow/sim/tb_led_flow.v|
+Z15 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/my_file/my_project/fpga_prj/Vivado_prj/2-led_flow/sim/tb_led_flow.v|
+!i113 0
+R9
+R2
+vtb_led
+R4
+!i10b 1
+!s100 SXQNT@_5BbG>M^mH7IB:O1
+R5
+IN_HFZ^?5Hf0NWMEA8]cHj0
+R6
+w1728737282
+8D:/my_file/my_project/fpga_prj/Vivado_prj/1-led/sim/tb/tb_led.v
+FD:/my_file/my_project/fpga_prj/Vivado_prj/1-led/sim/tb/tb_led.v
+!i122 0
+L0 3 24
+R7
+R8
+r1
+!s85 0
+31
+!s108 1728739325.000000
+!s107 D:/my_file/my_project/fpga_prj/Vivado_prj/1-led/sim/tb/tb_led.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/my_file/my_project/fpga_prj/Vivado_prj/1-led/sim/tb/tb_led.v|
+!i113 0
+R9
+R2
+vtb_led_flow
+!s110 1730708102
+!i10b 1
+!s100 VceKjiD5NcgRgZU>6gLfL3
+R5
+I]T>;M8]UQnPG6NQ[ZGUkT2
+R6
+w1730708091
+R11
+R12
+!i122 4
+R13
+R7
+R8
+r1
+!s85 0
+31
+R10
+R14
+R15
+!i113 0
+R9
+R2

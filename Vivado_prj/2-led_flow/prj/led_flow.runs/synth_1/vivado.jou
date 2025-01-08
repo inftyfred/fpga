@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Nov  4 17:13:48 2024
+# Process ID: 18332
+# Current directory: D:/my_file/my_project/fpga_prj/Vivado_prj/2-led_flow/prj/led_flow.runs/synth_1
+# Command line: vivado.exe -log led_flow.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_flow.tcl
+# Log file: D:/my_file/my_project/fpga_prj/Vivado_prj/2-led_flow/prj/led_flow.runs/synth_1/led_flow.vds
+# Journal file: D:/my_file/my_project/fpga_prj/Vivado_prj/2-led_flow/prj/led_flow.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source led_flow.tcl -notrace

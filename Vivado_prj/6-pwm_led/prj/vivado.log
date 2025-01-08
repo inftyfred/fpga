@@ -1,0 +1,440 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Dec 29 20:07:31 2024
+# Process ID: 11632
+# Current directory: D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20980 D:\my_file\my_project\fpga_prj\Vivado_prj\6-pwm_led\prj\pwm_led.xpr
+# Log file: D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/vivado.log
+# Journal file: D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'D:/my_app/Xilinx/Vivado/2020.2/scripts/Vivado_init.tcl'
+start_gui
+open_project D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/my_app/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1143.465 ; gain = 0.000
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_0
+set_property -dict [list CONFIG.C_PROBE4_WIDTH {10} CONFIG.C_PROBE3_WIDTH {10} CONFIG.C_PROBE2_WIDTH {7} CONFIG.C_NUM_OF_PROBES {6}] [get_ips ila_0]
+generate_target {instantiation_template} [get_files d:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  d:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_0'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.gen/sources_1/ip/ila_0/ila_0_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_0'...
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files d:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.srcs/sources_1/ip/ila_0/ila_0.xci]
+launch_runs ila_0_synth_1 -jobs 8
+[Sun Dec 29 20:36:02 2024] Launched ila_0_synth_1...
+Run output will be captured here: D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/ila_0_synth_1/runme.log
+export_simulation -of_objects [get_files d:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.srcs/sources_1/ip/ila_0/ila_0.xci] -directory D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.ip_user_files/sim_scripts -ip_user_files_dir D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.ip_user_files -ipstatic_source_dir D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.cache/compile_simlib/modelsim} {questa=D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.cache/compile_simlib/questa} {riviera=D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.cache/compile_simlib/riviera} {activehdl=D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Dec 29 20:54:36 2024] Launched synth_1...
+Run output will be captured here: D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/synth_1/runme.log
+[Sun Dec 29 20:54:36 2024] Launched impl_1...
+Run output will be captured here: D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1337.508 ; gain = 20.805
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C306B91DABCD
+set_property PROGRAM.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_0' at location 'uuid_23E7D65A79BC59F7BC47406C1714DFAE' from probes file, since it cannot be found on the programmed device.
+set_property PROBES.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Dec-29 20:59:45
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Dec-29 20:59:45
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes direction -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Dec-29 21:05:42
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Dec-29 21:05:46
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'bF [get_hw_probes direction -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Dec-29 21:06:52
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Dec-29 21:06:55
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq7'u0 [get_hw_probes cnt_2us -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq7'u50 [get_hw_probes cnt_2us -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes direction -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Dec-29 21:08:49
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Dec-29 21:08:49
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq7'hXX [get_hw_probes cnt_2us -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes led_OBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Dec-29 21:10:18
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Dec-29 21:10:18
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes led_OBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes sys_rst_n_IBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bF [get_hw_probes sys_rst_n_IBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Dec-29 21:14:50
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Dec-29 21:14:55
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Dec 29 21:17:24 2024] Launched synth_1...
+Run output will be captured here: D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/synth_1/runme.log
+[Sun Dec 29 21:17:24 2024] Launched impl_1...
+Run output will be captured here: D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2984.957 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C306B91DABCD
+set_property PROGRAM.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3248.012 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.srcs/constrs_1/new/pwm_led.xdc]
+Finished Parsing XDC File [D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.srcs/constrs_1/new/pwm_led.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3347.793 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 3487.344 ; gain = 502.387
+show_objects -name sys_rst_n [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ CARRY.*.* } ]
+set_property mark_debug true [get_nets [list sys_rst_n_IBUF]]
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'led'; it is not accessible from the fabric routing.
+set_property mark_debug true [get_nets [list led_OBUF]]
+set_property mark_debug true [get_nets [list {cnt_2ms_reg[0]} {cnt_2ms_reg[3]} {cnt_2ms_reg[5]} {cnt_2ms_reg[7]} {cnt_2ms_reg[1]} {cnt_2ms_reg[2]} {cnt_2ms_reg[4]} {cnt_2ms_reg[6]} {cnt_2ms_reg[8]} {cnt_2ms_reg[9]}]]
+set_property mark_debug true [get_nets [list {cnt_2s_reg[0]} {cnt_2s_reg[2]} {cnt_2s_reg[5]} {cnt_2s_reg[6]} {cnt_2s_reg[7]} {cnt_2s_reg[8]} {cnt_2s_reg[1]} {cnt_2s_reg[3]} {cnt_2s_reg[4]} {cnt_2s_reg[9]}]]
+set_property mark_debug true [get_nets [list {cnt_2us_reg[0]} {cnt_2us_reg[1]} {cnt_2us_reg[2]} {cnt_2us_reg[3]} {cnt_2us_reg[4]} {cnt_2us_reg[5]} {cnt_2us_reg[6]}]]
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sys_clk'; it is not accessible from the fabric routing.
+set_property mark_debug true [get_nets [list direction]]
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'led'; it is not accessible from the fabric routing.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'led'; it is not accessible from the fabric routing.
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list sys_clk_IBUF_BUFG ]]
+set_property port_width 10 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {cnt_2s_reg[0]} {cnt_2s_reg[1]} {cnt_2s_reg[2]} {cnt_2s_reg[3]} {cnt_2s_reg[4]} {cnt_2s_reg[5]} {cnt_2s_reg[6]} {cnt_2s_reg[7]} {cnt_2s_reg[8]} {cnt_2s_reg[9]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 10 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {cnt_2ms_reg[0]} {cnt_2ms_reg[1]} {cnt_2ms_reg[2]} {cnt_2ms_reg[3]} {cnt_2ms_reg[4]} {cnt_2ms_reg[5]} {cnt_2ms_reg[6]} {cnt_2ms_reg[7]} {cnt_2ms_reg[8]} {cnt_2ms_reg[9]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {cnt_2us_reg[0]} {cnt_2us_reg[1]} {cnt_2us_reg[2]} {cnt_2us_reg[3]} {cnt_2us_reg[4]} {cnt_2us_reg[5]} {cnt_2us_reg[6]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list direction ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list led12_in ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list led_OBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list sys_rst_n_IBUF ]]
+set_property target_constrs_file D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.srcs/constrs_1/new/pwm_led.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 3920.270 ; gain = 3.125
+[Sun Dec 29 21:31:15 2024] Launched impl_1...
+Run output will be captured here: D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7a35t_0 and the probes file(s) .
+The device design has 1 ILA core(s) and 0 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+set_property PROBES.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.ltx} [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+WARNING: Simulation object cnt_2us was not found in the design.
+WARNING: Simulation object cnt_2ms was not found in the design.
+WARNING: Simulation object cnt_2s was not found in the design.
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list sys_clk_IBUF_BUFG ]]
+set_property port_width 10 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {cnt_2s_reg[0]} {cnt_2s_reg[1]} {cnt_2s_reg[2]} {cnt_2s_reg[3]} {cnt_2s_reg[4]} {cnt_2s_reg[5]} {cnt_2s_reg[6]} {cnt_2s_reg[7]} {cnt_2s_reg[8]} {cnt_2s_reg[9]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 10 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {cnt_2ms_reg[0]} {cnt_2ms_reg[1]} {cnt_2ms_reg[2]} {cnt_2ms_reg[3]} {cnt_2ms_reg[4]} {cnt_2ms_reg[5]} {cnt_2ms_reg[6]} {cnt_2ms_reg[7]} {cnt_2ms_reg[8]} {cnt_2ms_reg[9]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {cnt_2us_reg[0]} {cnt_2us_reg[1]} {cnt_2us_reg[2]} {cnt_2us_reg[3]} {cnt_2us_reg[4]} {cnt_2us_reg[5]} {cnt_2us_reg[6]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list direction ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list led_OBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list sys_rst_n_IBUF ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 3982.512 ; gain = 0.000
+[Sun Dec 29 21:38:29 2024] Launched impl_1...
+Run output will be captured here: D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7a35t_0 and the probes file(s) .
+The device design has 1 ILA core(s) and 0 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+invalid map<K, T> key
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~""}]
+ERROR: [Labtools 27-188] Use refresh_hw_device command, with a valid [debug_nets.ltx] file before running this command.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~""}]
+ERROR: [Labtools 27-188] Use refresh_hw_device command, with a valid [debug_nets.ltx] file before running this command.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~""}]
+ERROR: [Labtools 27-188] Use refresh_hw_device command, with a valid [debug_nets.ltx] file before running this command.
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 3997.672 ; gain = 0.000
+[Sun Dec 29 21:47:09 2024] Launched impl_1...
+Run output will be captured here: D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list sys_clk_IBUF_BUFG ]]
+set_property port_width 10 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {cnt_2s_reg[0]} {cnt_2s_reg[1]} {cnt_2s_reg[2]} {cnt_2s_reg[3]} {cnt_2s_reg[4]} {cnt_2s_reg[5]} {cnt_2s_reg[6]} {cnt_2s_reg[7]} {cnt_2s_reg[8]} {cnt_2s_reg[9]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 10 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {cnt_2ms_reg[0]} {cnt_2ms_reg[1]} {cnt_2ms_reg[2]} {cnt_2ms_reg[3]} {cnt_2ms_reg[4]} {cnt_2ms_reg[5]} {cnt_2ms_reg[6]} {cnt_2ms_reg[7]} {cnt_2ms_reg[8]} {cnt_2ms_reg[9]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {cnt_2us_reg[0]} {cnt_2us_reg[1]} {cnt_2us_reg[2]} {cnt_2us_reg[3]} {cnt_2us_reg[4]} {cnt_2us_reg[5]} {cnt_2us_reg[6]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list direction ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list led_OBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list sys_rst_n_IBUF ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 4015.434 ; gain = 0.000
+[Sun Dec 29 21:52:42 2024] Launched impl_1...
+Run output will be captured here: D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/runme.log
+set_property PROBES.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.runs/impl_1/pwm_led.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {cnt_2ms_reg} {cnt_2s_reg} {cnt_2us_reg} {direction} {led_OBUF} {sys_rst_n_IBUF} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Dec-29 21:54:34
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Dec-29 21:54:50
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C306B91DABCD
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 29 22:10:24 2024...

@@ -1,0 +1,44 @@
+module top(
+	input        clk,   		//系统时钟
+	input        rst_n,			//复位按键
+	output       rtc_sclk,		//ds1302时钟线
+	output       rtc_ce,		//ds1302片选线
+	inout        rtc_data,		//ds1302数据线
+	
+	output [5:0] seg_sel,		//数码管位选
+	output [7:0] seg_data		//数码管段选
+);
+
+wire[7:0] read_second;
+wire[7:0] read_minute;
+wire[7:0] read_hour;
+wire[7:0] read_date;
+wire[7:0] read_month;
+wire[7:0] read_week;
+wire[7:0] read_year;
+
+//数码管动态扫描实例化
+seg_bcd seg_bcd_m0(
+    .clk          (clk),
+    .rst_n        (rst_n),
+    .seg_sel      (seg_sel),
+    .seg_data     (seg_data),
+    .seg_bcd      ({read_hour,read_minute,read_second})	//显示时分秒
+);
+
+//ds1302模块实例化
+ds1302_test ds1302_test_m0(
+    .rst         (~rst_n),
+    .clk         (clk),
+    .ds1302_ce   (rtc_ce),
+    .ds1302_sclk (rtc_sclk),
+    .ds1302_io   (rtc_data),
+    .read_second (read_second),
+    .read_minute (read_minute),
+    .read_hour   (read_hour),
+    .read_date   (read_date),
+    .read_month  (read_month),
+    .read_week   (read_week),
+    .read_year   (read_year)
+);
+endmodule 

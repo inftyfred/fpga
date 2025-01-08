@@ -1,0 +1,9 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+D:/my_file/my_project/fpga_prj/Vivado_prj/8-ram_single/ram_single.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v,1735908263,verilog,,D:/my_file/my_project/fpga_prj/Vivado_prj/8-ram_single/rtl/ram_rw.v,,blk_mem_gen_0,,,,,,,,
+D:/my_file/my_project/fpga_prj/Vivado_prj/8-ram_single/ram_single.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+D:/my_file/my_project/fpga_prj/Vivado_prj/8-ram_single/rtl/ram_rw.v,1735975346,verilog,,D:/my_file/my_project/fpga_prj/Vivado_prj/8-ram_single/rtl/ram_single.v,,ram_rw,,,,,,,,
+D:/my_file/my_project/fpga_prj/Vivado_prj/8-ram_single/rtl/ram_single.v,1735975774,verilog,,D:/my_file/my_project/fpga_prj/Vivado_prj/8-ram_single/sim/tb/tb_ram_single.v,,ram_single,,,,,,,,
+D:/my_file/my_project/fpga_prj/Vivado_prj/8-ram_single/sim/tb/tb_ram_single.v,1735975995,verilog,,,,tb_ram_single,,,,,,,,

@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -5.804
+TNS   : -1488.014
+
+Type  : Slow 1200mV 85C Model Setup 'led_seg7_display:len_seg7|clk_div:clk_div_1ms|clk_reg'
+Slack : -0.347
+TNS   : -0.390
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.431
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'led_seg7_display:len_seg7|clk_div:clk_div_1ms|clk_reg'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -908.583
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'led_seg7_display:len_seg7|clk_div:clk_div_1ms|clk_reg'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -5.413
+TNS   : -1320.401
+
+Type  : Slow 1200mV 0C Model Setup 'led_seg7_display:len_seg7|clk_div:clk_div_1ms|clk_reg'
+Slack : -0.214
+TNS   : -0.214
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'led_seg7_display:len_seg7|clk_div:clk_div_1ms|clk_reg'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -908.583
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'led_seg7_display:len_seg7|clk_div:clk_div_1ms|clk_reg'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.928
+TNS   : -326.693
+
+Type  : Fast 1200mV 0C Model Setup 'led_seg7_display:len_seg7|clk_div:clk_div_1ms|clk_reg'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.068
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'led_seg7_display:len_seg7|clk_div:clk_div_1ms|clk_reg'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -646.353
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'led_seg7_display:len_seg7|clk_div:clk_div_1ms|clk_reg'
+Slack : -1.000
+TNS   : -3.000
+
+------------------------------------------------------------

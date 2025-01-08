@@ -1,0 +1,25 @@
+# do {tb_pll_compile.do}
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 18:10:15 on Jan 03,2025
+# vlog -incr -work xil_defaultlib "+incdir+../../../../pll.gen/sources_1/ip/clk_wiz_0" ../../../../pll.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v ../../../../pll.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v ../../../../../rtl/pll.v ../../../../../sim/tb/tb_pll.v 
+# -- Compiling module clk_wiz_0_clk_wiz
+# -- Compiling module clk_wiz_0
+# -- Compiling module pll
+# -- Compiling module tb_pll
+# 
+# Top level modules:
+# 	tb_pll
+# End time: 18:10:16 on Jan 03,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 18:10:16 on Jan 03,2025
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 18:10:16 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

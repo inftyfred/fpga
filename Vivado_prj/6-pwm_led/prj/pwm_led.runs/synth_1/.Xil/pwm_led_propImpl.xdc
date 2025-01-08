@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:D:/my_file/my_project/fpga_prj/Vivado_prj/6-pwm_led/prj/pwm_led.srcs/constrs_1/new/pwm_led.xdc rfile:../../../pwm_led.srcs/constrs_1/new/pwm_led.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN R4 IOSTANDARD LVCMOS33} [get_ports sys_clk]
+set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN U2 IOSTANDARD LVCMOS33} [get_ports sys_rst_n]
+set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN R2 IOSTANDARD LVCMOS33} [get_ports {led}]

@@ -1,0 +1,9 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+D:/my_file/my_project/fpga_prj/Vivado_prj/7-PLL/prj/pll.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,1735894413,verilog,,D:/my_file/my_project/fpga_prj/Vivado_prj/7-PLL/rtl/pll.v,,clk_wiz_0,,,../../../../pll.gen/sources_1/ip/clk_wiz_0,,,,,
+D:/my_file/my_project/fpga_prj/Vivado_prj/7-PLL/prj/pll.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,1735894413,verilog,,D:/my_file/my_project/fpga_prj/Vivado_prj/7-PLL/prj/pll.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../pll.gen/sources_1/ip/clk_wiz_0,,,,,
+D:/my_file/my_project/fpga_prj/Vivado_prj/7-PLL/prj/pll.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+D:/my_file/my_project/fpga_prj/Vivado_prj/7-PLL/rtl/pll.v,1735895052,verilog,,D:/my_file/my_project/fpga_prj/Vivado_prj/7-PLL/sim/tb/tb_pll.v,,pll,,,../../../../pll.gen/sources_1/ip/clk_wiz_0,,,,,
+D:/my_file/my_project/fpga_prj/Vivado_prj/7-PLL/sim/tb/tb_pll.v,1735895248,verilog,,,,tb_pll,,,../../../../pll.gen/sources_1/ip/clk_wiz_0,,,,,

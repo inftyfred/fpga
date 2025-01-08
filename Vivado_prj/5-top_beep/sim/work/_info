@@ -1,0 +1,112 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/my_file/my_project/fpga_prj/Vivado_prj/4-touch_led/sim
+T_opt
+!s110 1735369524
+V?k=:emAV1MZjY`c1FRFgL0
+04 9 4 work testbench fast 0
+=1-1c8341c4ff26-676fa333-310-3244
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vkey_beep
+Z1 !s110 1735369508
+!i10b 1
+!s100 >7YkGT2NUmUiz8kCJlRI?2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IUf1coEC0HE9PEb[YMC;]a0
+Z3 dD:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/sim
+w1735363476
+8D:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/rtl/key_beep.v
+FD:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/rtl/key_beep.v
+!i122 15
+L0 1 34
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1735369508.000000
+!s107 D:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/rtl/key_beep.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/rtl/key_beep.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vkey_debounce
+R1
+!i10b 1
+!s100 WGOSmFXj:HL1A3KIE99[g1
+R2
+IkePR2G5UibU29lYE4Vbn41
+R3
+w1735367836
+8D:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/rtl/key_debounce.v
+FD:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/rtl/key_debounce.v
+!i122 16
+L0 2 52
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/rtl/key_debounce.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/rtl/key_debounce.v|
+!i113 0
+R7
+R0
+vtestbench
+R1
+!i10b 1
+!s100 kk7?3>EeV_D0faZMC2iKM1
+R2
+Im1RFH5bENSY3Izk0=eXXA0
+R3
+w1735369502
+8D:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/sim/testbench.v
+FD:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/sim/testbench.v
+!i122 14
+L0 3 47
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/sim/testbench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/sim/testbench.v|
+!i113 0
+R7
+R0
+vtop_beep
+R1
+!i10b 1
+!s100 zSmP33i>@h<cLYWQI:gBg0
+R2
+I98`X1Eo;moNL6dYao3M^P0
+R3
+w1735363821
+8D:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/rtl/top_beep.v
+FD:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/rtl/top_beep.v
+!i122 17
+L0 1 31
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/rtl/top_beep.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/my_file/my_project/fpga_prj/Vivado_prj/5-top_beep/rtl/top_beep.v|
+!i113 0
+R7
+R0

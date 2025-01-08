@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/my_file/project_fpga/ds1302/prj/simulation/qsim
+vtop
+Z1 !s110 1698582515
+!i10b 1
+!s100 iCU3JBMFWVRMCHODhg^o<1
+I2dOC[E?HI]YLzE;gdLiGJ2
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1698582513
+8ds1302_test.vo
+Fds1302_test.vo
+L0 32
+Z3 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1698582514.927000
+!s107 ds1302_test.vo|
+!s90 -work|work|ds1302_test.vo|
+!i113 1
+Z4 o-work work
+vtop_vlg_check_tst
+R1
+!i10b 1
+!s100 DJJj4J6^hA>4P=UW`lBFK3
+IBRn;7o<8=89K<=oVJd9k40
+R2
+R0
+Z5 w1698582512
+Z6 8Waveform.vwf.vt
+Z7 FWaveform.vwf.vt
+L0 76
+R3
+r1
+!s85 0
+31
+Z8 !s108 1698582515.104000
+Z9 !s107 Waveform.vwf.vt|
+Z10 !s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+vtop_vlg_sample_tst
+R1
+!i10b 1
+!s100 O[<kJHZhHX]99>hKOfkIL3
+ING`?l<EcInZDE[>@E6Tdf2
+R2
+R0
+R5
+R6
+R7
+L0 30
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
+vtop_vlg_vec_tst
+R1
+!i10b 1
+!s100 @JInh5ozbo50jaY8;bo9`1
+IA4953kLlIMRQ]Z0IRONgc3
+R2
+R0
+R5
+R6
+R7
+L0 600
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
